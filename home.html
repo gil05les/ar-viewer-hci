@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Model Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('home.png') no-repeat center center;
+      background-size: cover;
+      height: 102vh;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .button-wrapper {
+      margin-top: 34.5vh;
+      margin-left: 4vw;
+    }
+
+    .install-button img {
+      width: 174px;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-wrapper">
+    <!-- Direct link to .usdz file with rel="ar" for iOS -->
+    <a class="install-button" href="models/model.usdz" rel="ar" aria-label="View in AR">
+      <img src="installgpubutton.png" alt="Start AR">
+    </a>
+  </div>
+
+</body>
+</html>
