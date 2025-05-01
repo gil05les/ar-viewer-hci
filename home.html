@@ -13,6 +13,8 @@
       height: 102vh;
       display: flex;
       align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .button-wrapper {
@@ -25,6 +27,20 @@
       height: auto;
       cursor: pointer;
     }
+
+    /* Small button at the bottom center */
+    .small-button-wrapper {
+      position: absolute;
+      bottom: -137px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .small-button-wrapper img {
+      width: 120px; /* Adjust the size of the small button */
+      height: auto;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -33,6 +49,13 @@
     <!-- Direct link to .usdz file with rel="ar" for iOS -->
     <a class="install-button" href="models/model.usdz" rel="ar" aria-label="View in AR">
       <img src="pictures/installgpubutton.png" alt="Start AR">
+    </a>
+  </div>
+
+  <!-- Small button at the bottom center -->
+  <div class="small-button-wrapper">
+    <a href="tutorials.html" aria-label="View Tutorials">
+      <img src="pictures/tutorialsbutton.png" alt="View Tutorials">
     </a>
   </div>
 
