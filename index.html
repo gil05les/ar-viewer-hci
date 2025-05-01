@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D in AR (iPhone)</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/loginpage.png') no-repeat center center;
+      background-size: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .start-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      z-index: 10;
+      bottom: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .start-button img {
+      width: 330px;
+      height: auto;
+    }
+
+    model-viewer {
+      display: none;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="start-button" onclick="showAR()">
+    <img src="/loginbutton.png" alt="Start AR">
+  </button>
+
+  <model-viewer
+    id="arViewer"
+    src="models/model.usdz"
+    ios-src="models/model.usdz"
+    alt="3D Modell"
+    ar
+    ar-modes="quick-look"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1"
+    exposure="1"
+  >
+    <button slot="ar-button" style="
+      background: none;
+      border: none;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    ">
+      <img src="/loginbutton.png" alt="AR anzeigen" width="150">
+    </button>
+  </model-viewer>
+
+  <script>
+    function showAR() {
+      document.querySelector('.start-button').style.display = 'none';
+      const viewer = document.getElementById('arViewer');
+      viewer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
