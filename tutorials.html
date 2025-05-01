@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D in AR (iPhone)</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('pictures/tutorialspage.png') no-repeat center center;
+      background-size: cover;
+      height: 102vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    .button-wrapper {
+      position: absolute;
+      bottom: 20px; /* Adjust this value as needed */
+      text-align: center;
+    }
+
+    .install-button img {
+      width: 174px;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+</html>
