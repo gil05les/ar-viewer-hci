@@ -6,6 +6,15 @@
   <title>3D in AR (iPhone)</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
+  <body>
+    <!-- AR Button in top-right corner -->
+    <div class="top-right-button">
+      <a href="models/cpu.usdz" rel="ar" aria-label="View CPU in AR">
+        <img src="pictures/cpubutton.png" alt="Start CPU AR">
+      </a>
+    </div>
+  </body>
+
   <style>
     * {
       box-sizing: border-box;
@@ -23,19 +32,5 @@
       align-items: center;
       font-family: sans-serif;
       position: relative;
-    }
-
-    .button-wrapper {
-      position: absolute;
-      bottom: 20px; /* Adjust this value as needed */
-      text-align: center;
-    }
-
-    .install-button img {
-      width: 174px;
-      height: auto;
-      cursor: pointer;
-    }
-  </style>
-</head>
-</html>
+      
+    

@@ -20,6 +20,8 @@
     .button-wrapper {
       margin-top: 34.5vh;
       margin-left: 4vw;
+      display: flex;
+      gap: 20px; /* space between buttons */
     }
 
     .install-button img {
@@ -45,10 +47,16 @@
 </head>
 <body>
 
+
   <div class="button-wrapper">
-    <!-- Direct link to .usdz file with rel="ar" for iOS -->
-    <a class="install-button" href="models/model.usdz" rel="ar" aria-label="View in AR">
-      <img src="pictures/installgpubutton.png" alt="Start AR">
+    <!-- First AR button for GPU -->
+    <a class="install-button1" href="models/gpu.usdz" rel="ar" aria-label="View GPU in AR">
+      <img src="pictures/installgpubutton.png" alt="Start GPU AR">
+    </a>
+  
+    <!-- Second AR button for Final Check -->
+    <a class="install-button2" href="models/finalcheck.usdz" rel="ar" aria-label="View Final Check in AR">
+      <img src="pictures/finalcheckbutton.png" alt="Start Final Check AR">
     </a>
   </div>
 
