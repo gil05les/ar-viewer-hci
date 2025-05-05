@@ -12,16 +12,16 @@
       background-size: cover;
       height: 102vh;
       display: flex;
-      align-items: flex-start;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
     }
 
     .button-wrapper {
       margin-top: 34.5vh;
       margin-left: 4vw;
       display: flex;
-      gap: 20px; /* space between buttons */
+      gap: 20px;
     }
 
     .install-button img {
@@ -30,42 +30,34 @@
       cursor: pointer;
     }
 
-    /* Small button at the bottom center */
     .small-button-wrapper {
       position: absolute;
-      bottom: -137px; /* Adjust as needed */
+      bottom: -137px;
       left: 50%;
       transform: translateX(-50%);
     }
 
     .small-button-wrapper img {
-      width: 120px; /* Adjust the size of the small button */
+      width: 120px;
       height: auto;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-
-
   <div class="button-wrapper">
-    <!-- First AR button for GPU -->
-    <a class="install-button1" href="models/gpu.usdz" rel="ar" aria-label="View GPU in AR">
+    <a class="install-button" href="models/gpu.usdz" rel="ar" aria-label="View GPU in AR">
       <img src="pictures/installgpubutton.png" alt="Start GPU AR">
     </a>
-  
-    <!-- Second AR button for Final Check -->
-    <a class="install-button2" href="models/finalcheck.usdz" rel="ar" aria-label="View Final Check in AR">
+    <a class="install-button" href="models/finalcheck.usdz" rel="ar" aria-label="View Final Check in AR">
       <img src="pictures/finalcheckbutton.png" alt="Start Final Check AR">
     </a>
   </div>
 
-  <!-- Small button at the bottom center -->
   <div class="small-button-wrapper">
     <a href="tutorials.html" aria-label="View Tutorials">
       <img src="pictures/tutorialsbutton.png" alt="View Tutorials">
     </a>
   </div>
-
 </body>
 </html>

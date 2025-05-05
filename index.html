@@ -3,17 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>3D in AR (iPhone)</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
   <title>3D in AR (Start)</title>
-
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -23,16 +14,9 @@
       width: 100vw;
       display: flex;
       justify-content: center;
-
-      align-items: center;
-      position: relative;
-      font-family: sans-serif;
-
       align-items: flex-start;
-    }
-
-    .button-wrapper {
-      margin-top: 73vh;
+      font-family: sans-serif;
+      position: relative;
     }
 
     .start-button {
@@ -40,10 +24,10 @@
       border: none;
       cursor: pointer;
       position: absolute;
-      z-index: 10;
       bottom: 12%;
-      left: 49%;
+      left: 50%;
       transform: translateX(-50%);
+      z-index: 10;
     }
 
     .start-button img {
@@ -51,65 +35,17 @@
       max-width: 500px;
       height: auto;
     }
-
-    model-viewer {
-      display: none;
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    model-viewer button[slot="ar-button"] {
-      background: none;
-      border: none;
-      position: absolute;
-      bottom: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    model-viewer button[slot="ar-button"] img {
-      width: 40vw;
-      max-width: 150px;
-    }
   </style>
 </head>
 <body>
-
-  <button class="start-button" onclick="showAR()">
+  <button class="start-button" onclick="goToHome()">
     <img src="pictures/loginbutton.png" alt="Start AR">
   </button>
 
-  <model-viewer
-    id="arViewer"
-    src="models/model.usdz"
-    ios-src="models/model.usdz"
-    alt="3D Model"
-    ar
-    ar-modes="quick-look"
-    auto-rotate
-    camera-controls
-    shadow-intensity="1"
-    exposure="1"
-  >
-    <button slot="ar-button">
-      <img src="pictures/loginbutton.png" alt="View in AR">
-    </button>
-  </model-viewer>
-
   <script>
-    function showAR() {
-      document.querySelector('.start-button').style.display = 'none';
-      document.getElementById('arViewer').style.display = 'block';
+    function goToHome() {
+      window.location.href = "home.html";
     }
   </script>
-  <div class="button-wrapper">
-    <a class="start-button" href="home.html">
-      <img src="pictures/loginbutton.png" alt="Start">
-    </a>
-  </div>
-
 </body>
 </html>
